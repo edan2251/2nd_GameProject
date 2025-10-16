@@ -17,7 +17,7 @@ MonoBehaviour:
   question: {fileID: 0}
   questType: 0
   targetAmount: 1
-  deliveryPosition: {x: 45, y: 0, z: 45}
+  deliveryPosition: {x: 45, y: 1, z: 45}
   deliveryRedius: 3
   targetTag: 
   experienceReward: 100

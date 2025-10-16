@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI참조")]
     public Text scoreText;
-    public Text itemnCountText;
+    public Text itemCountText;
     public Text gameStatusText;
 
     public static GameManager Instance;
@@ -42,9 +42,9 @@ public class GameManager : MonoBehaviour
             scoreText.text = "점수 : " + playerScore;
         }
 
-        if(itemnCountText != null)
+        if(itemCountText != null)
         {
-            itemnCountText.text = "아이템 : " + itemsCollected + "개";
+            itemCountText.text = "아이템 : " + itemsCollected + "개";
         }
     }
 }
