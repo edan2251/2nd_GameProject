@@ -28,6 +28,10 @@ public class CoinItem : InteractableObject
         {
             QuestManager.Instance.AddCollectProgress(questTag);
         }
+
+        //이게 업적이랑 연결하는 부분
+        AchievementManager.instance?.UpdateProgress(AchievementType.CollectCoins, coinValue);
+
         Destroy(gameObject);
     }
 }
