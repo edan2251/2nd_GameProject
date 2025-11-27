@@ -32,7 +32,7 @@ public class ChasePlayerAI : MonoBehaviour
         {
             StopChasing();
         }
-        if(distanceToPlayer <= attackRange )
+        if (distanceToPlayer <= attackRange )
         {
             Attack();
         }

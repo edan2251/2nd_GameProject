@@ -37,8 +37,8 @@ public class PlayerController : MonoBehaviour
     private float attackTimer;
 
     private bool isUIMode = false;                              //UI 모드 설정
-    
 
+    public GameObject effectPos;
 
     void Start()
     {
@@ -142,6 +142,8 @@ public class PlayerController : MonoBehaviour
             {
                 isLanding = true;
                 landingTimer = landingDuration;
+
+                EffectManager.Instance.PlayEffect("Landing", transform.position);
             }
         }
     }
@@ -198,6 +200,7 @@ public class PlayerController : MonoBehaviour
             if(animator != null)
             {
                 animator.SetTrigger("attackTrigger");
+                EffectManager.Instance.PlayEffectWithDelay("Attack", effectPos.transform.position, Quaternion.identity, 0.5f, 1.0f);
             }
         }
     }
